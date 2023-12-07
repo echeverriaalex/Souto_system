@@ -1,0 +1,26 @@
+<div class="my-container">
+   
+    <div class="title">
+        <!-- <img src="../../../assets/souto sin autoservicio.png"> -->
+        <h2>Register a new product</h2>
+    </div>
+    <form (ngSubmit)="SaveProduct()" [formGroup]="formAddProduct">
+        <div class="mb-3">
+            <label for="brand" class="form-label">Brand</label>
+            <input type="text" name="brand" formControlName="brand" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" name="description" formControlName="description" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="code" class="form-label">Code</label>
+            <input type="text" name="code" formControlName="code" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price $</label>
+            <input type="number" name="price" formControlName="price" class="form-control" >
+        </div>
+        <button type="submit" class="btn btn-primary">Confirm</button>
+    </form>
+</div>
