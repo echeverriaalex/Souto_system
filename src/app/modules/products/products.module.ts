@@ -6,8 +6,6 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
-
 @NgModule({
   declarations: [
     ListProductsComponent,
@@ -20,9 +18,4 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ]
 })
-export class ProductsModule implements OnInit{
-  ngOnInit(): void {
-    
-  }
-  
-}
+export class ProductsModule { }

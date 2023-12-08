@@ -3,23 +3,27 @@
     margin: 0px;
 }
 
-.my-container-nav{
-    width: 50%;
-    background: lightblue;
-    margin: auto;
-}
-
 .my-container{
-    max-width: 50vh;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     background: grey;
     margin: auto;
-    border-radius: 20px;
     background: rgb(224, 35, 35);
+
+    margin-bottom: 20px;
+    padding: 2vh 0px;
 }
+
+.my-container-nav{
+    width: 50%;
+    background: lightblue;
+    margin: auto;
+    
+}
+
 
 .container-fluid{
     background: rgb(224, 35, 35);
