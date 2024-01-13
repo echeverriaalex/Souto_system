@@ -1,1 +1,38 @@
-<p>list-products works!</p>
+<!-- 
+    <p>list-products works!</p>
+<table>
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> Brand</th>
+            <th> Description</th>
+            <th> Code</th>
+            <th> Price</th>
+            <th> Image</th>
+        </tr>    
+    </thead>
+    <tbody >
+        <tr *ngFor="let product of this.productsList">
+            <td> {{ product.id }} </td>
+            <td> {{ product.brand }} </td>
+            <td> {{ product.description }} </td>
+            <td> {{ product.code }} </td>
+            <td> {{ product.price }} </td>
+            <td> <img src="{{ product.image }}" alt="">  </td>
+        </tr>
+    </tbody>
+</table>
+-->
+
+<div id="products-list" class="products-list">
+    <div class="card" *ngFor="let product of this.productsList">
+        <img class="card-img-top" src="{{ product.image }}">
+        <div class="card-body">
+            <h5 class="card-title"> {{ product.brand }} </h5>
+            <p class="card-text"> {{ product.description }} </p>
+            <h3> {{ product.price }} </h3>
+            <button class="btn btn-primary"> BUY</button>
+        </div>
+    </div>
+</div>
+

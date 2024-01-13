@@ -1,0 +1,50 @@
+.my-container{
+    max-width: 50vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: grey;
+    margin: auto;
+    border-radius: 20px;
+    background: rgb(224, 35, 35);
+}
+
+img{
+    width: 40vh;
+}
+
+.title{
+    padding: 0;
+    margin: 10px 0px;
+    text-align: center;
+    color: white;
+}
+
+form{
+    color: white;
+    font-size: 20px;
+    margin: 10px 0px;
+    width: 40vh;
+    text-align: center;
+}
+
+.form-control{
+    text-align: center;
+}
+
+.btn{
+    font-weight: bolder;
+    width: 25vh;
+    font-size: 20px;
+    background: white;
+    color: rgb(224, 35, 35);
+    border: 4px solid black;
+}
+
+.btn:hover{
+    background: linear-gradient(white, rgb(224, 35, 35),  rgb(31, 10, 10));
+    color: white;
+    transition: all 1s;
+    scale: 1.2;
+}

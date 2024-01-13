@@ -1,28 +1,34 @@
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ListProductsComponent } from './list-products/list-products.component';
-import { AddProductComponent } from './add-product/add-product.component';
+import { ProductsRoutingModule } from './products-routing.module';
 import { EditProductComponent } from './edit-product/edit-product.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//import { ListProductsComponent } from './list-products/list-products.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
+import { AddProductComponent } from './add-product/add-product.component';
+import { AdminProductsComponent } from './admin-products/admin-products.component';
+import { NavBarComponent } from 'src/app/shared/nav-bar/nav-bar.component';
+import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
+import { ListProducts2Component } from './list-products/list-products.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
-    ListProductsComponent,
+    AddProductComponent,
     EditProductComponent,
-    AddProductComponent
+    //ListProductsComponent,
+    AdminProductsComponent,
+    ErrorNotFoundComponent,
+    ListProducts2Component,
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule
+    ProductsRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    
   ]
 })
-export class ProductsModule implements OnInit{
-  ngOnInit(): void {
-    
-  }
-  
-}
+export class ProductsModule { }

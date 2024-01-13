@@ -1,16 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-//import { AddProductComponent } from './modules/products/add-product/add-product.component';
+import { ListProducts2Component } from './modules/products/list-products/list-products.component';
 
 const routes: Routes = [
   {
-    path: "product",
-    loadChildren: ()=> import("./modules/products/add-product/add-product.component").then(m=> m.AddProductComponent)
+    path: "",
+    component: ListProducts2Component
   },
   {
-    path: "employee",
-    loadChildren: ()=> import('./modules/add-employee/add-employee.component').then(m=>m.AddEmployeeComponent)
+    path: "products",
+    loadChildren: ()=> import("./modules/products/products.module").then(m => m.ProductsModule)
+  },
+  {
+    path: "employees",
+    loadChildren: ()=> import('./modules/employees/employees.module').then(m=>m.EmployeesModule)
+  },
+  {
+    path: "stores",
+    loadChildren: ()=> import('./modules/stores/stores.module').then(m=>m.StoresModule)
   }
+  /*,
+  {
+    //path: "**",
+    //loadChildren: ()=> import('./modules/error-not-found/error-not-found.component').then(m=>m.ErrorNotFoundComponent)
+  }
+  */
 ];
 
 @NgModule({

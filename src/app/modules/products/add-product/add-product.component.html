@@ -1,5 +1,4 @@
-<div class="my-container">
-   
+<div class="my-container">   
     <div class="title">
         <!-- <img src="../../../assets/souto sin autoservicio.png"> -->
         <h2>Register a new product</h2>
@@ -14,6 +13,10 @@
             <input type="text" name="description" formControlName="description" class="form-control">
         </div>
         <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="text" name="image" formControlName="image" class="form-control">
+        </div>
+        <div class="mb-3">
             <label for="code" class="form-label">Code</label>
             <input type="text" name="code" formControlName="code" class="form-control">
         </div>
@@ -21,6 +24,11 @@
             <label for="price" class="form-label">Price $</label>
             <input type="number" name="price" formControlName="price" class="form-control" >
         </div>
+        <div *ngIf="(formAddProduct.controls['price'].getError('required') && 
+                    formAddProduct.controls['price'].touched)">
+            <p>Need a value</p>
+        </div>
+        
         <button type="submit" class="btn btn-primary">Confirm</button>
     </form>
 </div>

@@ -1,9 +1,14 @@
+/*
 export class Product{
     id: number | null | undefined;
-    code: string | null | undefined;
     brand: string | null | undefined;
     description: string | null | undefined;
+    code: string | null | undefined;
+    price: number | null | undefined;
+    createdAt: string | null | undefined;
+    updatedAt: string | null | undefined;
 }
+*/
 
 export class Person{
     dni: string | null | undefined;

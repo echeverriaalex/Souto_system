@@ -1,0 +1,108 @@
+table{
+    border: 2px solid white;
+    margin: 10px 20px;
+}
+
+td{
+    border: 2px solid white;
+    margin: 10px 20px;
+    padding: 10px 20px;
+
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    /* background: red; */
+    margin: 0px;
+}
+
+
+main{
+    display: block;
+}
+
+nav{
+    /* background: rgb(214, 126, 11); */
+    height: 50px;
+    margin: 5px 5px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a{
+    margin: auto 20px;
+}
+
+section{
+    text-align: center;
+    display: block;
+    background: rgb(143, 140, 146);
+    width: 300px;
+    float: left;
+    border-radius: 15px;
+    margin: 0px 10px;
+    padding: 10px 10px;
+}
+
+.item-cart{
+    display: block;
+    background: rgb(255, 255, 255);
+    width: 220px;
+    margin: 10px auto;
+    float: none;
+}
+
+.imag-cart{
+    width: 60px;
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+
+.products-list{
+    border-radius: 10px;
+    background: rgb(175, 172, 167);
+   /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    */
+    display:inline-block;
+    width: auto;
+   
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.card{
+    margin: 5px 5px;
+    width: 30rem;
+    max-width: 30rem;
+    height: 30rem;
+}
+
+.btn{
+    width: 20vh;
+    height: 40px;
+    justify-content: center;
+    left: 30px;
+}
+
+.card-img-top{
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
+    padding: 5px 5px;
+}
