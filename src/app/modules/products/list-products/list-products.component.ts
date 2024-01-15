@@ -36,4 +36,9 @@ export class ListProducts2Component {
       //.subscribe(products => this.productsList = products);
       .subscribe(products => console.log(products));
   }
+
+  saludar(id: number | undefined){
+    console.log("hola " + id);
+    
+  }
 }

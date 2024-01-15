@@ -25,14 +25,14 @@
 -->
 
 <div id="products-list" class="products-list">
-    <div class="card" *ngFor="let product of this.productsList">
+    <div class="card" *ngFor="let product of this.productsList" (click) ="saludar( product.id )">
         <img class="card-img-top" src="{{ product.image }}">
+        <h3> {{ product.brand }} </h3>
         <div class="card-body">
-            <h5 class="card-title"> {{ product.brand }} </h5>
-            <p class="card-text"> {{ product.description }} </p>
-            <h3> {{ product.price }} </h3>
-            <button class="btn btn-primary"> BUY</button>
+            <p class="card-text">{{ product.brand }} {{ product.description }} </p>
+            
         </div>
+        <h3 class="card-price"> $ {{ product.price }} </h3>
     </div>
 </div>
 

@@ -69,40 +69,59 @@ section{
 .products-list{
     border-radius: 10px;
     background: rgb(175, 172, 167);
-   /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 70%;
-    */
-    display:inline-block;
     width: auto;
-   
-
-
+    max-width: 70%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 20px;
+    margin: 10px auto;
 }
 
 .card{
     margin: 5px 5px;
-    width: 30rem;
-    max-width: 30rem;
-    height: 30rem;
-}
-
-.btn{
-    width: 20vh;
-    height: 40px;
-    justify-content: center;
-    left: 30px;
+    width: 350px;
+    height: 500px;
+    /* border: 3px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
 }
 
 .card-img-top{
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
-    height: 60%;
-    padding: 5px 5px;
+    height: 280px;
+    padding: 0px 2px;
+    /* background: red; */
+}
+
+.card-body{
+    background: yellow;
+    padding: 10px 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.card-text{
+    display: block;
+    height: 60px;
+    background: red;
+    width: 100%;
+}
+
+.card-price{
+    position: relative;
+    margin: 10px 0;
+    bottom: 0;
+}
+
+.btn{
+    display: block;
+    width: 60%;
+    height: 40px;
+    position: absolute;
+    bottom: 0 ;
+    margin: 5px;
 }
