@@ -11,19 +11,28 @@ import { AddStoreComponent } from './modules/stores/add-store/add-store.componen
 import { ListStoresComponent } from './modules/stores/list-stores/list-stores.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogComponent } from './shared/dialog/dialog.component';
 //import { ErrorNotFoundComponent } from './modules/error-not-found/error-not-found.component';
+import { MatDialogModule } from "@angular/material/dialog";
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    DialogComponent,
     //ErrorNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

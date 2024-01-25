@@ -29,10 +29,12 @@
         <img class="card-img-top" src="{{ product.image }}">
         <h3> {{ product.brand }} </h3>
         <div class="card-body">
-            <p class="card-text">{{ product.brand }} {{ product.description }} </p>
-            
+            <p class="card-text">{{ product.brand }} {{ product.description }} </p>            
         </div>
         <h3 class="card-price"> $ {{ product.price }} </h3>
+    </div>
+    <div *ngIf="this.productsList.length == 0 ">
+        <p> No hay Data </p>
     </div>
 </div>
 

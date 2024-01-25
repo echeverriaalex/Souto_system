@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { DialogService } from 'src/app/core/services/dialog/dialog.service';
 //import { Product } from 'src/app/core/models/product';
-
+//import { MAT_DIA } from @angular/material/MatDialog;
 import { ProductsService } from 'src/app/core/services/products/products.service';
 
 @Component({
@@ -15,39 +16,49 @@ export class AddProductComponent implements OnInit{
   
   //private product?:Product
 
-  formAddProduct: FormGroup = this.formBuilder.group({
-    brand: ["", Validators.required, Validators.minLength(1)],
-    description: ["", Validators.required, Validators.minLength(1)],
-    code: ["", Validators.required, Validators.minLength(1)],
-    image: ["", Validators.required, Validators.minLength(1)],
-    price: ["", Validators.required, Validators.minLength(1)],
+  AddProduct: FormGroup = this.formBuilder.group({
+    brand: ["", Validators.required],
+    description: ["", Validators.required],
+    code: ["", Validators.required],
+    image: ["", Validators.required],
+    price: ["", Validators.required],
   })
   
-  constructor(private formBuilder: FormBuilder, private productsService: ProductsService, private router: Router) {}
+  constructor(private formBuilder: FormBuilder, private productsService: ProductsService, private router: Router, private dialogService: DialogService) {}
   
   ngOnInit(): void { }
 
-  SaveProduct(){
-
-    let brand = this.formAddProduct.get('brand')?.value;
+  createProduct(){    
+    let brand = this.AddProduct.get('brand')?.value;
     brand = brand.charAt(0).toUpperCase() + brand.substr(1).toLowerCase();
 
-    let description = this.formAddProduct.get('description')?.value;
+    let description = this.AddProduct.get('description')?.value;
     description = description.charAt(0).toUpperCase() + description.substr(1).toLowerCase();
 
-    const product = {
+    return {
       brand : brand,
-      code : this.formAddProduct.get('code')?.value,
       description: description,
-      price: this.formAddProduct.get('price')?.value,
-      image: this.formAddProduct.get('image')?.value
+      code : this.AddProduct.get('code')?.value,      
+      price: this.AddProduct.get('price')?.value,
+      image: this.AddProduct.get('image')?.value
     }
+  }
 
+  openDialog(){
+    this.dialogService.openDialogCustom({
+      title: "Register product",
+      content: "Product successfully registered"
+    });
+  }
+
+  SaveProduct(){
+
+    let product = this.createProduct();
     console.log(product);
-    
 
     this.productsService.addNewProduct(product)
     .subscribe(data=>{
+      this.openDialog();
       this.router.navigate(['/products/list']);
     })
   }
